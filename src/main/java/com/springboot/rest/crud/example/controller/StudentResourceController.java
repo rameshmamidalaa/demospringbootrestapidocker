@@ -49,7 +49,7 @@ public class StudentResourceController {
 			@ApiResponse(code = 200, message = "Successfully retrieved the list"),
 			@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
 			@ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
-			@ApiResponse(code = 401, message = "The resource you were trying to reach is not found")
+			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
 	})
 	@GetMapping("/students")
 	public ResponseEntity<List<StudentDto>> getAllStudents() {
